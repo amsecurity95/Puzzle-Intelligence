@@ -100,7 +100,7 @@ const createTables = () => {
                 user_agent TEXT,
                 referrer TEXT,
                 created_at TEXT DEFAULT CURRENT_TIMESTAMP,
-                date TEXT DEFAULT DATE('now')
+                date TEXT DEFAULT CURRENT_DATE
             )`,
             
             // Statistics - Clicks
@@ -111,7 +111,7 @@ const createTables = () => {
                 user_ip TEXT,
                 user_agent TEXT,
                 created_at TEXT DEFAULT CURRENT_TIMESTAMP,
-                date TEXT DEFAULT DATE('now')
+                date TEXT DEFAULT CURRENT_DATE
             )`,
             
             // Promo Countdown Settings
@@ -131,7 +131,7 @@ const createTables = () => {
                 project_interest TEXT,
                 message TEXT,
                 created_at TEXT DEFAULT CURRENT_TIMESTAMP,
-                date TEXT DEFAULT DATE('now')
+                date TEXT DEFAULT CURRENT_DATE
             )`
         ];
         
@@ -260,4 +260,5 @@ module.exports = {
     getDb,
     close
 };
+
 
